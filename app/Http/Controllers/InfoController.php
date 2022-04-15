@@ -14,7 +14,7 @@ class InfoController extends Controller
     public function index($id){
         
          if(strcasecmp($id,'eur' ) AND strcasecmp($id,'usd' ) AND strcasecmp($id,'gbp' ) ){
-             return 'please put right cuurency in request body';
+             return 'please put proper currency code in request body';
          }
          $highestRate = $this->highestRate($id);
          $lowestRate =  $this->lowestRate($id);
